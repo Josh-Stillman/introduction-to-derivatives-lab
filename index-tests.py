@@ -4,6 +4,12 @@ derivative_at_x_value_provided_tangent, output_at, df_dx,
 nonlinear_function_trace, tangent_line_delta, four_x_cubed_plus)
 
 class IntroToDerivatives (unittest.TestCase):
+    import unittest
+from ipynb.fs.full.index import (derivative_of_graphed_function,
+derivative_at_x_value_provided_tangent, output_at, df_dx,
+nonlinear_function_trace, tangent_line_delta, four_x_cubed_plus)
+
+class IntroToDerivatives (unittest.TestCase):
     def test_derivative_of_graphed_function(self):
         self.assertEqual(derivative_of_graphed_function, 3)
 
@@ -36,5 +42,5 @@ class IntroToDerivatives (unittest.TestCase):
         self.assertEqual(nonlinear_function_trace(three_x_cubed_plus, list(range(-4, 4))), three_x_cubed_plus_trace)
 
     def test_tangent_line_delta(self):
-        three_x_cubed_plus = [(3, 3), (-11, 0)]
-        self.assertEqual(tangent_line_delta(three_x_cubed_plus, 3, line_length = 4, delta = .00001), {'x': [-1, 3, 7], 'y': [-254.0, 70, 394.0]})
+        x_squared = [(1, 2)]
+        self.assertEqual(tangent_line_delta(x_squared, 2, line_length = 1, delta = .00001), {'x': [1.5, 2, 2.5], 'y': [2.0, 4, 6.0]})
